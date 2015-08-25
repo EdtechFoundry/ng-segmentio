@@ -1,8 +1,8 @@
 'use strict';
 
-segmentio.$inject = ['$rootScope', '$window', '$location', '$log', '$q'];
+segmentio.$inject = ['$window', '$q'];
 
-function segmentio($rootScope, $window, $location, $q) {
+function segmentio($window, $q) {
   var service = {};
 
   $window.analytics = $window.analytics || [];
