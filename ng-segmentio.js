@@ -62,13 +62,6 @@ function segmentio($rootScope, $window, $location, $q) {
   // Add a version to keep track of what's in the wild.
   $window.analytics.SNIPPET_VERSION = '3.0.1';
 
-  // Listening to $viewContentLoaded event to track pageview
-  $rootScope.$watch(function () {
-    return $location.path();
-  }, function (value) {
-    service.page(value);
-  });
-
   return service;
 }
 
